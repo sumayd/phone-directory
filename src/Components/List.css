@@ -1,0 +1,37 @@
+.lisContent {
+    max-width: 480px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+}
+ul.personList {
+    padding: 0 15px;
+}
+.personList li{
+    display: flex;
+    justify-content: space-between;
+}
+.personList li span{
+    flex: 1;
+}
+input#filter {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 14px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 90%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgb(0 0 0 / 3%) inset;
+    margin-bottom: 30px;
+}
+span.name {
+    text-align: left;
+}
+span.phone {
+    text-align: right;
+}
