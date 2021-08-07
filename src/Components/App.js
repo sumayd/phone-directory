@@ -9,10 +9,10 @@ class App extends Component{
         phone:'0000000000'
        },{
         name:'Ponnappa Priya',
-        phone:'0000000000'
+        phone:'0000000001'
        },{
         name:'Mia Wong',
-        phone:'0000000000'
+        phone:'00000000011'
     }]
    };
    render(){
