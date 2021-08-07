@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
-
+import PropTypes from 'prop-types';
 class Form extends Component {
     constructor(){
         super();
         this.onChange = this.onChange.bind(this);
+        this.onSubmit= this.onSubmit.bind(this);
     }
+
+    static propTypes = {
+        addContact: PropTypes.func
+    };
 
     state = {
         name: '',
@@ -16,10 +21,21 @@ class Form extends Component {
         [e.target.name]: e.target.value
         });
     }
+
+    onSubmit(e){
+        e.preventDefault();
+        this.props.addContact({
+           ...this.state 
+        });
+        this.setState({
+            name: '',
+            phone: ''
+        })
+    }
     render() {
         return (
             <div className="phoneForm">
-                <form>
+                <form onSubmit={this.onSubmit}>
                     <input 
                     name="name" 
                     id="name" 
