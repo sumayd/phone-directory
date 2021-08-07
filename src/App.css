@@ -1,6 +1,9 @@
 .App {
-  text-align: center;
-  color: #384047;
+    max-width: 480px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
 }
 
 .App-logo {
@@ -32,6 +35,21 @@
 ul{
   list-style: none;
   padding-left: 0;
+  margin: 0;
+}
+input{
+  width: 100%;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 14px;
+  height: auto;
+  outline: 0;
+  padding: 10px 0;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgb(0 0 0 / 3%) inset;
+  margin: 20px 0;
+  text-indent: 10px;
 }
 @keyframes App-logo-spin {
   from {

@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 class Form extends Component {
     render() {
         return (
-            <div>
-                
+            <div className="phoneForm">
+                <form>
+                    <input name="name" id="name" placeholder="Enter a name"/>
+                    <br/>
+                    <input name="phone" id="phone" placeholder="Enter a phone"/>
+                    <br/>
+                    <button>Add</button>
+                </form>
             </div>
         )
     }
