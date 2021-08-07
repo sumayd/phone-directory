@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import './List.css';
 
 class List extends Component {
+    static propTypes ={
+        contacts: PropTypes.array.isRequired,
+    };
     render() {
         return (
             <div className={"lisContent"}>
@@ -9,22 +13,12 @@ class List extends Component {
                 <div className={"personFiltre"}>
                     <input name={"filter"} id={"filter"} placeholder={"Search"}/>
                     <ul className={"personList"}>
-                        <li>
-                            <span className={"name"}>John Stone</span>
-                            <span className={"phone"}>0000000000</span>
-                        </li>
-                        <li>
-                            <span className={"name"}>Ponnappa Priya</span>
-                            <span className={"phone"}>0000000000</span>
-                        </li>
-                        <li>
-                            <span className={"name"}>Mia Wong</span>
-                            <span className={"phone"}>0000000000</span>
-                        </li>
-                        <li>
-                            <span className={"name"}>Jane Meldrum</span>
-                            <span className={"phone"}>0000000000</span>
-                        </li>
+                        {this.props.contacts.map( contact =>
+                                <li key={contact.phone}>
+                                    <span className={"name"}>{contact.name}</span>
+                                    <span className={"phone"}>{contact.phone}</span>
+                                </li>  
+                        )}
                     </ul>
                 </div>
             </div>
