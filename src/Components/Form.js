@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
+import './Form.css';
 class Form extends Component {
     constructor(){
         super();
@@ -43,12 +44,15 @@ class Form extends Component {
                     onChange={this.onChange} 
                     placeholder="Enter a name"/>
                     <br/>
+                    <label>
+                    <span>Phone:</span>
                     <input 
                     name="phone" 
                     id="phone" 
                     value={this.state.phone} 
                     onChange={this.onChange} 
-                    placeholder="Enter a phone"/>
+                    placeholder="(xxx) xxx-xxxx"/>
+                    </label>
                     <br/>
                     <button>Add</button>
                 </form>

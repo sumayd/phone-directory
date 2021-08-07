@@ -1,6 +1,8 @@
 .personList li{
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid #eceff5;
+    line-height: 40px;
 }
 .personList li span{
     flex: 1;
@@ -10,4 +12,5 @@ span.name {
 }
 span.phone {
     text-align: right;
+    font-size: 14px;
 }

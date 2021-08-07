@@ -40,16 +40,17 @@ ul{
 input{
   width: 100%;
   background: rgba(255,255,255,0.1);
-  border: none;
   font-size: 14px;
   height: auto;
   outline: 0;
   padding: 10px 0;
-  background-color: #e8eeef;
-  color: #8a97a0;
+  background-color: #fff;
   box-shadow: 0 1px 0 rgb(0 0 0 / 3%) inset;
-  margin: 20px 0;
+  margin: 15px 0;
+  line-height: 1.5;
   text-indent: 10px;
+  border: 1px solid rgba(149, 170, 201, 0.19);
+  color: #303030;
 }
 @keyframes App-logo-spin {
   from {

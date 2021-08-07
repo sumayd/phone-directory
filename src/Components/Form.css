@@ -1,0 +1,15 @@
+button{
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+    height: 35px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    margin: 20px 0;
+}
+.phoneForm span {
+    font-size: 14px;
+}
