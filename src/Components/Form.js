@@ -14,23 +14,46 @@ class Form extends Component {
 
     state = {
         name: '',
-        phone: ''
+        phone: '',
+        error: ''
     };
 
     onChange(e){
-        this.setState({
-        [e.target.name]: e.target.value
-        });
+
+        const { name, value } = e.target;
+        
+        if (name === 'phone') {
+            const numericValue = value.replace(/[^0-9]/g, '');
+            if (numericValue.length > 10) return;
+            this.setState({
+                [name]: numericValue,
+                error: ''
+            });
+        } else {
+            this.setState({
+                [name]: value,
+                error: ''
+            });
+        }
+
+        
     }
 
     onSubmit(e){
         e.preventDefault();
+        const { name, phone } = this.state;
+        if (phone.length !== 10) {
+            this.setState({ error: 'Phone number must be exactly 10 characters.' });
+            return;
+        }
+
         this.props.addContact({
            ...this.state 
         });
         this.setState({
             name: '',
-            phone: ''
+            phone: '',
+            error: ''
         })
     }
     render() {
@@ -56,6 +79,7 @@ class Form extends Component {
                     <br/>
                     <button>Add</button>
                 </form>
+                {this.state.error && <p style={{ color: 'red' }}>{this.state.error}</p>}
             </div>
         )
     }

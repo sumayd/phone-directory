@@ -39,6 +39,7 @@ class List extends Component {
                                 </li>  
                         )}
                     </ul>
+                    <p>Total Contact: {filteredContacts.length} </p>
                 </div>
             </div>
         )
